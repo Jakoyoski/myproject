@@ -13,7 +13,7 @@
         <div class="container">
             <a class="navbar-brand" href="/">MyShop</a>
             <div class="ms-auto">
-                <a href="/cart" class="btn btn-outline-light">
+                <a href="<?=base_url('cart')?>" class="btn btn-outline-light">
                     🛒 Cart <span class="badge bg-danger"><?= $cartCount ?></span>
                 </a>
             </div>
@@ -35,12 +35,13 @@
                         <h5 class="card-title"><?= $product['name'] ?></h5>
                         <p class="card-text"><?= $product['description'] ?></p>
                         <p class="h4 text-primary">$<?= number_format($product['price'], 2) ?></p>
-                        <a href="/add-to-cart/<?= $product['id'] ?>" class="btn btn-primary">Add to Cart</a>
+                        <a href="<?= base_url('add-to-cart/' . $product['id']) ?>" class="btn btn-primary">Add to Cart</a>
                     </div>
                 </div>
             </div>
             <?php endforeach; ?>
         </div>
     </div>
+  
 </body>
 </html>

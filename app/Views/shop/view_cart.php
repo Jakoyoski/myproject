@@ -43,7 +43,7 @@
                         </td>
                         <td>$<?= number_format($item['quantity'] * $item['product']['price'], 2) ?></td>
                         <td>
-                            <a href="/remove-from-cart/<?= $item['id'] ?>" class="btn btn-danger btn-sm">Remove</a>
+                            <a href="<?=base_url('remove-from-cart/'.$item['id']) ?>" class="btn btn-danger btn-sm">Remove</a>
                         </td>
                     </tr>
                     <?php endforeach; ?>
@@ -59,7 +59,7 @@
             
             <div class="text-end">
                 <a href="/" class="btn btn-secondary">Continue Shopping</a>
-                <a href="/checkout" class="btn btn-success">Proceed to Checkout</a>
+                <a href="<?=base_url('/checkout')?>" class="btn btn-success">Proceed to Checkout</a>
             </div>
         <?php endif; ?>
     </div>
