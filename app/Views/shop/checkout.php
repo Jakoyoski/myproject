@@ -9,7 +9,8 @@
         <h2>Checkout</h2>
         <div class="row">
             <div class="col-md-8">
-                <form method="post" action="/process-checkout">
+                <form method="post" action="<?= site_url('/process-checkout') ?>">
+                    <?= csrf_field() ?>
                     <div class="mb-3">
                         <label for="name" class="form-label">Full Name</label>
                         <input type="text" class="form-control" id="name" name="name" required>
@@ -31,7 +32,7 @@
                     </div>
                     
                     <div class="mt-4">
-                        <a href="/cart" class="btn btn-secondary">Back to Cart</a>
+                        <a href="<?=base_url('/cart')?>" class="btn btn-secondary">Back to Cart</a>
                         <button type="submit" class="btn btn-success">Place Order</button>
                     </div>
                 </form>

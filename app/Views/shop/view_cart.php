@@ -7,8 +7,8 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="/">MyShop</a>
-            <a href="/" class="btn btn-outline-light">Continue Shopping</a>
+            <a class="navbar-brand" href="<?= site_url('/') ?>">MyShop</a>
+            <a href="<?= site_url('/') ?>" class="btn btn-outline-light">Continue Shopping</a>
         </div>
     </nav>
     
@@ -17,7 +17,7 @@
         
         <?php if(empty($cartItems)): ?>
             <div class="alert alert-info">Your cart is empty!</div>
-            <a href="/" class="btn btn-primary">Go Shopping</a>
+            <a href="<?= site_url('/') ?>" class="btn btn-primary">Go Shopping</a>
         <?php else: ?>
             <table class="table">
                 <thead>
@@ -58,8 +58,8 @@
             </table>
             
             <div class="text-end">
-                <a href="/" class="btn btn-secondary">Continue Shopping</a>
-                <a href="<?=base_url('/checkout')?>" class="btn btn-success">Proceed to Checkout</a>
+                <a href="<?= site_url('/') ?>"class="btn btn-secondary">Continue Shopping</a>
+                <a href="<?=base_url('checkout/')?>" class="btn btn-success">Proceed to Checkout</a>
             </div>
         <?php endif; ?>
     </div>
