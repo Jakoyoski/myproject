@@ -1,3 +1,25 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <title>checkoute</title>
+    
+    <style>
+        /* Your custom CSS goes here */
+        body { background-color: #f8f9fa; }
+    </style>
+  </head>
+  <body>
+    <main class="container my-5">
+        <h1>Welcome to MyShop</h1>
+        <p>Start shopping our amazing collection.</p>
+    </main>
+<div class="container mt-4">
 <form method="post" action="<?= base_url('process-checkout') ?>">
     <?= csrf_field() ?>
     
@@ -66,3 +88,14 @@
         <button type="submit" class="btn btn-success">Place Order</button>
     </div>
 </form>
+
+</div>
+<footer class="bg-light text-center py-4 mt-auto border-top">
+        <div class="container">
+            <p class="text-muted">&copy; 2025 MyShop Creation. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
