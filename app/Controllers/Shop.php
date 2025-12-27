@@ -14,7 +14,8 @@ class Shop extends BaseController
     {
         helper(['url', 'form']);
         $this->productModel = model('ProductModel'); 
-        $this->orderModel   = model('OrderModel');
+        //$this->orderModel   = model('OrderModel');
+        
         $this->cart = service('cart');
         
     }
@@ -237,6 +238,7 @@ class Shop extends BaseController
             $db->transStart();
             
             // Save order
+            $this->orderModel = new \App\Models\OrderModel();
             $this->orderModel->save($orderData);
             $orderId = $this->orderModel->insertID();
             
